@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div class="header">
-      <div class="container">
+    <div class="header bg-danger py-4">
+      <div class="container-xl">
         <div class="row">
           <div class="col">
             <router-link to="/"><h1>Home</h1></router-link>
@@ -25,11 +25,17 @@
 }
 
 .header {
-  background: #d9444a;
-  padding: 2rem 0;
   a {
     color: #fff;
     text-decoration: none;
+  }
+}
+
+// Bootstrap Setting
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1140px;
   }
 }
 </style>
