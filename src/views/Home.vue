@@ -4,7 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div> -->
   <div class="container">
-    <div class="row">
+    <div class="row my-5">
       <div class="col-md-3">
         <Sidebar />
       </div>
