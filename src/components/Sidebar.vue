@@ -1,6 +1,25 @@
 <template>
   <div>
-    sidebar
+    <p class="my-5">總共有 2 個作品</p>
+    <div class="card">
+      <div class="card-header">
+        程式語言
+      </div>
+      <div class="card-body">
+        <div class="form-check mb-1">
+          <input class="form-check-input" type="checkbox" value="" id="vueCheck">
+          <label class="form-check-label" for="vueCheck">
+            VueJs
+          </label>
+        </div>
+        <div class="form-check mb-1">
+          <input class="form-check-input" type="checkbox" value="" id="bootstrapCheck">
+          <label class="form-check-label" for="bootstrapCheck">
+            Bootstrap
+          </label>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
