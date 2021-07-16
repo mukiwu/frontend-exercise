@@ -2,7 +2,7 @@
   <div>
     <p class="my-5">總共有 2 個作品</p>
     <div class="card">
-      <div class="card-header">
+      <div class="card-header py-3">
         程式語言
       </div>
       <div class="card-body">
@@ -31,18 +31,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+.card {
+  border: 1px solid #e5e5e5;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.card-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
 }
 </style>

@@ -17,6 +17,10 @@
 </template>
 
 <style lang="scss">
+body {
+  background: #f5f4f4;
+}
+
 #app {
   font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
