@@ -1,19 +1,16 @@
 <template>
   <div>
-    
-      <div class="nav btn-group" id="v-pills-tab" role="tablist">
-        <button class="btn btn-outline-primary active" data-bs-toggle="tab" data-bs-target="#v-pills-home" type="button" role="tab">Home</button>
-        <button class="btn btn-outline-primary" data-bs-toggle="tab" data-bs-target="#v-pills-profile" type="button" role="tab">Profile</button>
-        <button class="btn btn-outline-primary" data-bs-toggle="tab" data-bs-target="#v-pills-messages" type="button" role="tab">Messages</button>
-        <button class="btn btn-outline-primary" data-bs-toggle="tab" data-bs-target="#v-pills-settings" type="button" role="tab">Settings</button>
+    <div class="d-flex justify-content-end">
+      <div class="nav btn-group" role="tablist">
+        <button class="btn btn-outline-primary active" data-bs-toggle="tab" data-bs-target="#tabGrid" type="button" role="tab"><span class="fe fe-grid"></span></button>
+        <button class="btn btn-outline-primary" data-bs-toggle="tab" data-bs-target="#tabList" type="button" role="tab">Profile</button>
       </div>
-      <div class="tab-content" id="v-pills-tabContent">
-        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel">123</div>
-        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel">456</div>
-        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel">789</div>
-        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel">000</div>
-      </div>
-    
+      
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="tabGrid" role="tabpanel">123</div>
+      <div class="tab-pane fade" id="tabList" role="tabpanel">456</div>
+    </div>
   </div>
 </template>
 
