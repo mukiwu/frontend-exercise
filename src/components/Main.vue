@@ -2,7 +2,7 @@
   <div>
     <div class="d-flex justify-content-end">
       <div class="nav btn-group" role="tablist">
-        <button class="btn btn-outline-primary active" data-bs-toggle="tab" data-bs-target="#tabGrid" type="button" role="tab"><span class="fe fe-grid"></span></button>
+        <button class="btn btn-outline-primary active" data-bs-toggle="tab" data-bs-target="#tabGrid" type="button" role="tab"><font-awesome-icon icon="th-large" /></button>
         <button class="btn btn-outline-primary" data-bs-toggle="tab" data-bs-target="#tabList" type="button" role="tab">Profile</button>
       </div>
       
