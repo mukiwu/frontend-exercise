@@ -2,8 +2,8 @@
   <div>
     <div class="d-flex justify-content-end">
       <div class="nav btn-group" role="tablist">
-        <button class="btn btn-outline-primary active" data-bs-toggle="tab" data-bs-target="#tabGrid" type="button" role="tab"><font-awesome-icon icon="th-large" /></button>
-        <button class="btn btn-outline-primary" data-bs-toggle="tab" data-bs-target="#tabList" type="button" role="tab">Profile</button>
+        <button class="btn btn-outline-danger active" data-bs-toggle="tab" data-bs-target="#tabGrid" type="button" role="tab"><font-awesome-icon icon="th-large" /></button>
+        <button class="btn btn-outline-danger" data-bs-toggle="tab" data-bs-target="#tabList" type="button" role="tab"><font-awesome-icon icon="list" /></button>
       </div>
       
     </div>
@@ -22,18 +22,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.nav {
+  .btn {
+    font-size: .8em;
+  }
 }
 </style>

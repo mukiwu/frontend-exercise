@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="header bg-danger py-4">
+    <div class="header bg-dark py-4">
       <div class="container-xl">
         <div class="row">
           <div class="col">
