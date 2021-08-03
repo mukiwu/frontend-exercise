@@ -15,8 +15,7 @@
               {{ item.name }}
             </div>
             <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <img src="https://picsum.photos/300/200" alt="">
             </div>
             <div class="card-footer">
               <span class="badge bg-danger me-1" v-for="(tag, key) in item.tags" :key="key">
@@ -37,10 +36,10 @@ export default {
   data() {
     return {
       exercise: [
-        { name: '課程 1',
-          tags: ["vue", "css", "html"]      
+        { name: '待辦事項 ToDo List',
+          tags: ["vue", "css", "html"]
         },{
-          name: '課程 2',
+          name: '城市環境資源篩選器',
           tags: ["vue", "JS"]
         }
       ]
