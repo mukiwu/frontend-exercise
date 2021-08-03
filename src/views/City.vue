@@ -48,15 +48,18 @@ export default {
   },
   methods: {
     getData() {
-      const vm = this
+      // const vm = this
       const api = 'https://cors-anywhere.herokuapp.com/http://opendata2.epa.gov.tw/AQI.json';
 			// https 環境下是禁止取得 http 資源
 			// 可以將資源改成使用 https://cors-anywhere.herokuapp.com/ + url
 			// 透過 cors-anywhere.herokuapp 協助取得 http 資源，然後轉為 https 供運用
 
       // 使用 jQuery ajax
-      $.get(api).then(function( response ) {
-        vm.AQIdata = response
+      // $.get(api).then(function( response ) {
+      //   vm.AQIdata = response
+      // });
+      this.$http.get(api).then(response => {
+        console.log(response);
       });
     },
     starStatus(val) {
@@ -85,32 +88,3 @@ export default {
   }
 }
 </script>
-
-
-<style scoped lang="scss">
-/*
-狀態對應表
-'良好',
-'status-aqi2' '普通',
-'status-aqi3' '對敏感族群不健康',
-'status-aqi4' '對所有族群不健康',
-'status-aqi5' '非常不健康',
-'status-aqi6' '危害'
-*/
-
-.status-aqi2 {
-  background-color: #ffff00;
-}
-.status-aqi3 {
-  background-color: #ff7e00;
-}
-.status-aqi4 {
-  background-color: #ff0000;
-}
-.status-aqi5 {
-  background-color: #8f3f97;
-}
-.status-aqi6 {
-  background-color: #7e0023;
-}
-</style>
