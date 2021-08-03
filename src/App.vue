@@ -9,12 +9,32 @@
         </div>
       </div>
     </div>
-    <router-view/>
+    <div class="container">
+      <div class="row my-5">
+        <div class="col-md-3">
+          <Sidebar />
+        </div>
+        <div class="col-md-9">
+          <router-view/>
+        </div>
+      </div>
+    </div>
+    
       <!-- <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> -->
     
   </div>
 </template>
+
+<script>
+import Sidebar from '@/components/Sidebar.vue'
+
+export default {
+  components: {
+    Sidebar,
+  }
+}
+</script>
 
 <style lang="scss">
 body {
