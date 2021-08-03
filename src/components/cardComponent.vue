@@ -3,8 +3,10 @@
     <div class="card-header">{{ data.County }}
       <a href="#" class="float-right" @click.prevent="updateStatus(data.
       SiteName)">
-        <div v-show="parentStar.indexOf(data.SiteName) == -1"><i class="far fa-star"></i></div>
-        <div v-show="parentStar.indexOf(data.SiteName) !== -1"><i class="fas fa-star"></i></div>
+        <div v-show="parentStar.indexOf(data.SiteName) == -1"><font-awesome-icon :icon="['far', 'star']" />
+</div>
+        <div v-show="parentStar.indexOf(data.SiteName) !== -1"><font-awesome-icon icon="star" />
+</div>
       </a>
     </div>
     <div class="card-body">
@@ -20,7 +22,7 @@
 
 <script>
 export default {
-  template: "#cardComponentTemplate",
+  name: "cardComponent",
   props: {
     data: {
       type: Object
@@ -42,19 +44,14 @@ export default {
       switch(e) {
         case '普通':
           return 'status-aqi2'
-          break
         case '對敏感族群不健康':
           return 'status-aqi3'
-          break
         case '對所有族群不健康':
           return 'status-aqi4'
-          break
         case '非常不健康':
           return 'status-aqi5'
-          break
         case '危害':
           return 'status-aqi6'
-          break
         default: 
           return
       }

@@ -45,21 +45,19 @@ export default {
     if (localStorage.getItem("stared") !== null) {
       this.stared = JSON.parse(localStorage.getItem("stared"))
     }
+    
   },
   methods: {
     getData() {
-      // const vm = this
-      const api = 'https://cors-anywhere.herokuapp.com/http://opendata2.epa.gov.tw/AQI.json';
+      const vm = this
+      const api = 'http://opendata2.epa.gov.tw/AQI.json';
 			// https 環境下是禁止取得 http 資源
 			// 可以將資源改成使用 https://cors-anywhere.herokuapp.com/ + url
 			// 透過 cors-anywhere.herokuapp 協助取得 http 資源，然後轉為 https 供運用
 
-      // 使用 jQuery ajax
-      // $.get(api).then(function( response ) {
-      //   vm.AQIdata = response
-      // });
-      this.$http.get(api).then(response => {
-        console.log(response);
+      vm.$http.get(api).then(response => {
+        vm.AQIdata = response.data
+        console.log(vm.AQIdata)
       });
     },
     starStatus(val) {
