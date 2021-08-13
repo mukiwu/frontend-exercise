@@ -1,21 +1,23 @@
 <template>
-  <div class="card" :class="status(data.Status)">
-    <div class="card-header">{{ data.County }}
-      <a href="#" class="float-right" @click.prevent="updateStatus(data.
-      SiteName)">
-        <div v-show="parentStar.indexOf(data.SiteName) == -1"><font-awesome-icon :icon="['far', 'star']" />
-</div>
-        <div v-show="parentStar.indexOf(data.SiteName) !== -1"><font-awesome-icon icon="star" />
-</div>
-      </a>
-    </div>
-    <div class="card-body">
-      <ul class="list-unstyled">
-        <li>AQI 指數: {{ data.AQI }}</li>
-        <li>PM2.5: {{ data['PM2.5'] }}</li>
-        <li>說明: {{ data.Status }}</li>
-      </ul>
-    {{ data.PublishTime }}
+  <div class="col my-2">
+    <div class="card" :class="status(data.Status)">
+      <div class="card-header">{{ data.County }}
+        <a href="#" class="float-end" @click.prevent="updateStatus(data.
+        SiteName)">
+          <div v-show="parentStar.indexOf(data.SiteName) == -1"><font-awesome-icon :icon="['far', 'star']" />
+  </div>
+          <div v-show="parentStar.indexOf(data.SiteName) !== -1"><font-awesome-icon icon="star" />
+  </div>
+        </a>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled">
+          <li>AQI 指數: {{ data.AQI }}</li>
+          <li>PM2.5: {{ data['PM2.5'] }}</li>
+          <li>說明: {{ data.Status }}</li>
+        </ul>
+      {{ data.PublishTime }}
+      </div>
     </div>
   </div>
 </template>
@@ -88,5 +90,9 @@ export default {
 }
 .status-aqi6 {
   background-color: #7e0023;
+}
+
+.card-header a {
+  display: inline-block;
 }
 </style>

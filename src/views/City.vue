@@ -6,14 +6,14 @@
     </select>
     <div>
       <h4>關注城市</h4>
-      <div class="card-columns">
+      <div class="row row-cols-4">
         <card-component v-for="(item, key) in starAQIData()" v-on:star="starStatus" :data="item" :key="key" :parent-star="stared"></card-component>
       </div>
     </div>
     
     <hr>
     <h4>一般城市</h4>
-    <div class="card-columns">
+    <div class="row row-cols-4">
       <card-component v-for="(item, key) in filterAQIData(filter)" v-on:star="starStatus" :data="item" :key="key" :parent-star="stared" :filter="filter"></card-component>
     </div>
   </div>
