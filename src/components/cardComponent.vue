@@ -11,8 +11,8 @@
       <div class="card-body">
         <div class="text-center mb-2"><h3>{{ data.County }}</h3></div>
         <div class="d-flex justify-content-center">
-          <div class="text-center mx-2"><h4 class="mb-0">{{ data.AQI }}</h4><span class="badge bg-primary">AQI 指數</span></div>
-          <div class="text-center mx-2"><h4 class="mb-0">{{ data['PM2.5'] }}</h4><span class="badge bg-primary" >PM2.5</span></div>
+          <div class="text-center mx-2"><h4 class="mb-0">{{ data.AQI }}</h4><span class="badge bg-secondary">AQI 指數</span></div>
+          <div class="text-center mx-2"><h4 class="mb-0">{{ data['PM2.5'] }}</h4><span class="badge bg-secondary">PM2.5</span></div>
         </div>
         <div class="text-center mt-3">
           <div class="badge" :class="status(data.Status)">{{ data.Status }}</div>
@@ -55,7 +55,7 @@ export default {
         case '危害':
           return 'bg-danger'
         default: 
-          return 'bg-secondary'
+          return 'bg-dark'
       }
     },
     updateStatus(siteName) {

@@ -15,7 +15,7 @@
               {{ item.name }}
             </div>
             <div class="card-body">
-              <img src="https://picsum.photos/300/200" alt="">
+              <router-link :to="{ name: item.link }"><img src="https://picsum.photos/300/200" alt=""></router-link>
             </div>
             <div class="card-footer">
               <span class="badge bg-danger me-1" v-for="(tag, key) in item.tags" :key="key">
@@ -40,7 +40,8 @@ export default {
           tags: ["vue", "css", "html"]
         },{
           name: '城市環境資源篩選器',
-          tags: ["vue", "JS"]
+          tags: ["vue", "JS"],
+          link: 'City'
         },{
           name: 'test',
           tags: ["vue", "JS"]
