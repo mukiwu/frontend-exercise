@@ -1,22 +1,22 @@
 <template>
   <div class="col my-2">
-    <div class="card" :class="status(data.Status)">
-      <div class="card-header">{{ data.County }}
-        <a href="#" class="float-end" @click.prevent="updateStatus(data.
+    <div class="card">
+      <a href="#" class="d-inline-block text-end pt-2 pe-3" @click.prevent="updateStatus(data.
         SiteName)">
-          <div v-show="parentStar.indexOf(data.SiteName) == -1"><font-awesome-icon :icon="['far', 'star']" />
+        <div v-show="parentStar.indexOf(data.SiteName) == -1"><font-awesome-icon :icon="['far', 'star']" />
   </div>
-          <div v-show="parentStar.indexOf(data.SiteName) !== -1"><font-awesome-icon icon="star" />
+        <div v-show="parentStar.indexOf(data.SiteName) !== -1"><font-awesome-icon icon="star" />
   </div>
-        </a>
-      </div>
+      </a>
       <div class="card-body">
-        <ul class="list-unstyled">
-          <li>AQI 指數: {{ data.AQI }}</li>
-          <li>PM2.5: {{ data['PM2.5'] }}</li>
-          <li>說明: {{ data.Status }}</li>
-        </ul>
-      {{ data.PublishTime }}
+        <div class="text-center mb-2"><h3>{{ data.County }}</h3></div>
+        <div class="d-flex justify-content-center">
+          <div class="text-center mx-2"><h4 class="mb-0">{{ data.AQI }}</h4><span class="badge bg-primary">AQI 指數</span></div>
+          <div class="text-center mx-2"><h4 class="mb-0">{{ data['PM2.5'] }}</h4><span class="badge bg-primary" >PM2.5</span></div>
+        </div>
+        <div class="text-center mt-3">
+          <div class="badge" :class="status(data.Status)">{{ data.Status }}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -45,17 +45,17 @@ export default {
     status(e) {
       switch(e) {
         case '普通':
-          return 'status-aqi2'
+          return 'bg-info'
         case '對敏感族群不健康':
-          return 'status-aqi3'
+          return 'bg-warning'
         case '對所有族群不健康':
-          return 'status-aqi4'
+          return 'bg-warning'
         case '非常不健康':
-          return 'status-aqi5'
+          return 'bg-danger'
         case '危害':
-          return 'status-aqi6'
+          return 'bg-danger'
         default: 
-          return
+          return 'bg-secondary'
       }
     },
     updateStatus(siteName) {
@@ -66,33 +66,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-/*
-狀態對應表
-'良好',
-'status-aqi2' '普通',
-'status-aqi3' '對敏感族群不健康',
-'status-aqi4' '對所有族群不健康',
-'status-aqi5' '非常不健康',
-'status-aqi6' '危害'
-*/
-
-.status-aqi2 {
-  background-color: #ffff00;
-}
-.status-aqi3 {
-  background-color: #ff7e00;
-}
-.status-aqi4 {
-  background-color: #ff0000;
-}
-.status-aqi5 {
-  background-color: #8f3f97;
-}
-.status-aqi6 {
-  background-color: #7e0023;
+.card {
+  background: linear-gradient(135deg,#eee,#fcfcfc);
+  border: 1px solid #e5e5e5;
 }
 
-.card-header a {
-  display: inline-block;
-}
 </style>
