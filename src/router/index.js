@@ -22,7 +22,12 @@ const routes = [
     path: '/city',
     name: 'City',
     component: () => import('../views/City.vue')
-  }
+  },
+  {
+    path: '/WeatherFiveDays',
+    name: 'WeatherFiveDays',
+    component: () => import('../views/WeatherFiveDays.vue')
+  },
 ]
 
 const router = new VueRouter({

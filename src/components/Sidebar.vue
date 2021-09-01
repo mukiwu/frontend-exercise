@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p class="my-5">總共有 2 個作品</p>
     <div class="card">
       <div class="card-header py-3">
         程式語言
