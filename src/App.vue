@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div class="header bg-dark py-4">
+    <div class="header py-5">
       <div class="container-xl">
         <div class="row">
           <div class="col">
-            <router-link to="/"><h1>Home</h1></router-link>
+            <router-link to="/"><h1>MUKI wu / Portfolio</h1></router-link>
           </div>
         </div>
       </div>
@@ -38,17 +38,22 @@ export default {
 
 <style lang="scss">
 body {
-  background: #f5f4f4;
+  background: #edeef3;
 }
 
 #app {
-  font-family: Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #333;
 }
 
 .header {
+  background: #c1c8d6;
+  h1 {
+    font-weight: 300;
+    color: #333;
+  }
   a {
     color: #fff;
     text-decoration: none;

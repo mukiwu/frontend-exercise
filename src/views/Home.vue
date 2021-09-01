@@ -15,7 +15,7 @@
               {{ item.name }}
             </div>
             <div class="card-body">
-              <router-link :to="{ name: item.link }"><img src="https://picsum.photos/300/200" alt=""></router-link>
+              <router-link :to="{ name: item.link }"><img :src="item.image" alt=""></router-link>
             </div>
             <div class="card-footer">
               <span class="badge bg-danger me-1" v-for="(tag, key) in item.tags" :key="key">
@@ -36,15 +36,15 @@ export default {
   data() {
     return {
       exercise: [
-        { name: '待辦事項 ToDo List',
-          tags: ["vue", "css", "html"]
-        },{
+        {
           name: '城市環境資源篩選器',
           tags: ["vue", "JS"],
+          image: '/img/city.png',
           link: 'City'
         },{
-          name: 'test',
-          tags: ["vue", "JS"]
+          name: '五日氣象',
+          tags: ["vue", "JS"],
+          link: 'WeatherFiveDays'
         }
       ]
     }
@@ -57,6 +57,11 @@ export default {
 .nav {
   .btn {
     font-size: .8em;
+  }
+}
+.card-body {
+  img {
+    max-width: 100%;
   }
 }
 </style>
